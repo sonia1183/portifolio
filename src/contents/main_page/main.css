@@ -1,0 +1,11 @@
+.faded{
+    animation: fade 5s linear 0s infinite;
+}
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
