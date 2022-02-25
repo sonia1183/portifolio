@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.mainbox{
+  position: absolute;
+  left: 0;
+  bottom:2%;
+  /* transform: translate(-50%, -50%); */
+}
+label{
+  position: relative;
+  background: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+  color: #0984e3;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+label:hover{
+letter-spacing: 1px;
+}
+label::before{
+  content: 'C';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: red;
+  color: #fff;
+  border-radius: 35px;
+  opacity: 0;
+}
+#check{
+  display: none;
+}
+#check:checked ~ label::before{
+  opacity: 1;
+}
+.media-icons{
+  position: absolute;
+  left: 50%;
+  top: -260px;
+  transform: translateX(-50%);
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 35px;
+  /* padding:10px; */
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+#check:checked ~ .media-icons{
+  opacity: 1;
+  pointer-events: auto;
+  top: -270px;
+}
+ /* .media-icons::before{
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 50%;
+  background: white;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}  */
+.media-icons a{
+  font-size: 22px;
+  color: #0984e3;
+  transition: all 0.3s ease;
+}
+.media-icons a:hover{
+  transform: translateY(-2px);
+}
+.media-icons a:nth-child(1):hover{
+  color: #426782;
+}
+.media-icons a:nth-child(2):hover{
+  color: #1da1f2;
+}
+.media-icons a:nth-child(3):hover{
+  color: #e1306c;
+}
+.media-icons a:nth-child(4):hover{
+  color: #ff0000;
+}
+.icon{
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.media-icons{
+    margin-bottom: 100px;
+}
